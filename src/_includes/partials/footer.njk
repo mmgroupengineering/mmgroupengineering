@@ -1,0 +1,15 @@
+<footer class="site-footer">
+  <div class="content-width site-footer__grid">
+    <div>
+      <p class="site-footer__brand">{{ site.name }}</p>
+      <p class="site-footer__tagline">{{ site.tagline }}</p>
+    </div>
+    <div class="site-footer__contact">
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p><a href="tel:{{ site.phone | replace(' ', '') }}">{{ site.phone }}</a></p>
+    </div>
+  </div>
+  <div class="site-footer__bottom content-width">
+    <p class="site-footer__copy">&copy; {% year %} {{ site.name }}. All rights reserved.</p>
+  </div>
+</footer>

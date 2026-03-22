@@ -1,0 +1,12 @@
+{
+  "name": "MM Group Engineering",
+  "tagline": "Ship repair & maintenance",
+  "url": "https://mmgroupengineering.github.io/mmgroupengineering/",
+  "email": "info@mmgroupengineering.example",
+  "phone": "+359 00 000 0000",
+  "address": "Port area, Bulgaria",
+  "heroImage": "/static/banner.jpeg",
+  "servicesIntro": "Since 1998, we have been providing high-quality solutions for repair and servicing of marine vessels.",
+  "teamBannerImage": "/static/team.jpg",
+  "teamBannerAlt": "MM Group Engineering team"
+}

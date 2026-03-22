@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Team member one",
+    "role": "Operations",
+    "image": "/assets/images/team-placeholder.svg",
+    "summary": "Leads day-to-day project delivery and client coordination. Background in marine repair and yard planning."
+  },
+  {
+    "name": "Team member two",
+    "role": "Technical lead",
+    "image": "/assets/images/team-placeholder.svg",
+    "summary": "Oversees technical standards, welding procedures, and quality documentation for class and owner approvals."
+  },
+  {
+    "name": "Team member three",
+    "role": "Site supervision",
+    "image": "/assets/images/team-placeholder.svg",
+    "summary": "On-board and quayside supervision, safety briefings, and progress reporting for active repairs."
+  }
+]

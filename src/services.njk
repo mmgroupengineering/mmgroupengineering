@@ -1,0 +1,34 @@
+---
+layout: layouts/base.njk
+title: Services
+nav: services
+permalink: /services/
+description: Marine repair and engineering services — dry dock, teams, and facilities.
+---
+
+<section class="page-hero page-hero--compact">
+  <div class="content-width">
+    <h1 class="page-hero__title">Services</h1>
+    <p class="page-hero__lead">{{ site.servicesIntro }}</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="content-width">
+    {% for item in services %}
+      <article class="service-detail" id="{{ item.slug }}">
+        <div class="service-detail__grid{% if loop.index0 % 2 == 1 %} service-detail__grid--reverse{% endif %}">
+          <div class="service-detail__media">
+            <img class="service-detail__img" src="{{ item.image | url }}" alt="{{ item.title }}" width="720" height="480" loading="lazy">
+          </div>
+          <div class="service-detail__body">
+            <h2 class="service-detail__title">{{ item.title }}</h2>
+            {% for p in item.paragraphs %}
+              <p class="service-detail__text">{{ p }}</p>
+            {% endfor %}
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>

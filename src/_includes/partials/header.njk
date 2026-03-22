@@ -1,0 +1,29 @@
+<header class="site-header">
+  <div class="site-header__inner content-width">
+    <a class="site-logo" href="{{ '/' | url }}">
+      <img class="site-logo__img" src="{{ '/static/logo.png' | url }}" width="480" height="120" alt="MM Group Engineering logo">
+    </a>
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="visually-hidden">Menu</span>
+    </button>
+    <nav id="site-nav" class="site-nav" data-nav>
+      {% set items = [
+        { id: "home", label: "Home", href: "/" },
+        { id: "about", label: "About us", href: "/about/" },
+        { id: "team", label: "Our team", href: "/team/" },
+        { id: "services", label: "Services", href: "/services/" },
+        { id: "contact", label: "Contact", href: "/contact/" }
+      ] %}
+      <ul class="site-nav__list">
+        {% for item in items %}
+          <li class="site-nav__item">
+            <a class="site-nav__link{% if nav == item.id %} site-nav__link--active{% endif %}" href="{{ item.href | url }}">{{ item.label }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

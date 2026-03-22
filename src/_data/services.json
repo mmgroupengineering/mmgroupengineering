@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "main-engine-maintenance",
+    "title": "Main Engine and Auxiliary Machinery Overhaul & Maintenance",
+    "image": "/static/services/engine_2.jpg",
+    "paragraphs": [
+      "We plan and execute dry-docking work with clear scopes, yard coordination, and class attendance. Hull steel, propulsion, and underwater fittings are surveyed and repaired to agreed standards and documentation packages.",
+      "Tell us your docking window and vessel particulars—we align resources and supervision so handover matches your sailing schedule."
+    ]
+  },
+  {
+    "slug": "welding-services",
+    "title": "Welding Services",
+    "image": "/static/services/welding_2.jpg",
+    "paragraphs": [
+      "Our marine services cover piping, systems, and auxiliary equipment in port and alongside. We work from approved procedures and keep traceability for parts, tests, and sign-off.",
+      "Whether the job is a short call or a multi-week availability, we structure the work list so owners see progress and risks early."
+    ]
+  },
+  {
+    "slug": "painting-services",
+    "title": "Blasting and Painting Services",
+    "image": "/static/services/blasting.jpg",
+    "paragraphs": [
+      "We blast and paint the hull and superstructure of the vessel to agreed standards and documentation packages.",
+      "Ask us about our capacity and slots for your next project—we can advise on realistic timelines and interfaces with the yard."
+    ]
+  },
+  {
+    "slug": "piping-services",
+    "title": "Pipe Systems Maintenance",
+    "image": "/static/services/piping.jpg",
+    "paragraphs": [
+      "We fabricate and install piping and systems to agreed standards and documentation packages.",
+      "Ask us abougt our capacity and slots for your next project—we can advise on realistic timelines and interfaces with the yard."
+    ]
+  }
+]

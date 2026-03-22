@@ -1,0 +1,45 @@
+---
+layout: layouts/base.njk
+title: Our team
+nav: team
+permalink: /team/
+description: Meet the MM Group Engineering team.
+---
+
+{% if site.teamBannerImage %}
+<section class="team-banner">
+  <img
+    class="team-banner__img"
+    src="{{ site.teamBannerImage | url }}"
+    alt="{{ site.teamBannerAlt | default('MM Group Engineering team') }}"
+    width="1600"
+    height="560"
+    loading="eager"
+    decoding="async"
+  >
+</section>
+{% endif %}
+
+<section class="page-hero page-hero--compact">
+  <div class="content-width">
+    <h1 class="page-hero__title">Our team</h1>
+    <p class="page-hero__lead">The people behind your projects—replace placeholders with real names and photos when ready.</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="content-width">
+    {% for member in team %}
+      <article class="team-row{% if loop.index0 % 2 == 1 %} team-row--reverse{% endif %}">
+        <div class="team-row__media">
+          <img class="team-row__img" src="{{ member.image | url }}" alt="Portrait of {{ member.name }}" width="480" height="360" loading="lazy">
+        </div>
+        <div class="team-row__body">
+          <h2 class="team-row__name">{{ member.name }}</h2>
+          <p class="team-row__role">{{ member.role }}</p>
+          <p class="team-row__summary">{{ member.summary }}</p>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>

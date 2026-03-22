@@ -1,0 +1,47 @@
+---
+layout: layouts/base.njk
+title: Home
+nav: home
+description: MM Group Engineering — ship repair and marine engineering.
+---
+
+<section class="hero"{% if site.heroImage %} style="--hero-image: url('{{ site.heroImage | url }}')"{% endif %}>
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <p class="hero__eyebrow">Marine engineering</p>
+    <h1 class="hero__title">{{ site.name }}</h1>
+    <p class="hero__tagline">{{ site.tagline }}</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="{{ '/contact/' | url }}">Contact us</a>
+      <a class="btn btn--ghost" href="{{ '/services/' | url }}">Services</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--intro">
+  <div class="content-width">
+    <h2 class="section__title">Who we are</h2>
+    <p class="section__lead intro-text">
+      MM Group Engineering supports ship owners and operators with dependable repair and engineering services.
+      From steel and piping to site supervision, we align our work with class requirements and your operational schedule.
+    </p>
+  </div>
+</section>
+
+<section class="section section--services-band" aria-labelledby="services-heading" data-scroll-animate="services">
+  <div class="content-width services-band__intro">
+    <h2 class="section__title" id="services-heading">What we offer</h2>
+    <p class="services-band__lead">{{ site.servicesIntro }}</p>
+  </div>
+  <div class="service-strip" role="list">
+    {% for item in services %}
+      <a class="service-panel" role="listitem" href="{{ '/services/' | url }}#{{ item.slug }}" style="--service-panel-image: url('{{ item.image | url }}')">
+        <span class="service-panel__overlay" aria-hidden="true"></span>
+        <span class="service-panel__inner">
+          <span class="service-panel__title">{{ item.title }}</span>
+          <span class="service-panel__more">Read more</span>
+        </span>
+      </a>
+    {% endfor %}
+  </div>
+</section>

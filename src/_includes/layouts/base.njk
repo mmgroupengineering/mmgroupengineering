@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} · {% endif %}{{ site.name }}</title>
+  <meta name="description" content="{{ description | default(site.tagline) }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
+  <script>document.documentElement.classList.add("js-anim");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include "partials/header.njk" %}
+  <main id="main" class="main">
+    {{ content | safe }}
+  </main>
+  {% include "partials/footer.njk" %}
+  <script>
+    (function () {
+      var toggle = document.querySelector("[data-nav-toggle]");
+      var nav = document.querySelector("[data-nav]");
+      if (!toggle || !nav) return;
+      toggle.addEventListener("click", function () {
+        var open = nav.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      var section = document.querySelector('[data-scroll-animate="services"]');
+      if (!section) return;
+
+      function reveal() {
+        section.classList.add("is-inview");
+      }
+
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        reveal();
+        return;
+      }
+
+      if (!("IntersectionObserver" in window)) {
+        reveal();
+        return;
+      }
+
+      var io = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            section.classList.toggle("is-inview", entry.isIntersecting);
+          });
+        },
+        { threshold: 0.06, rootMargin: "100px 0px 80px 0px" }
+      );
+      io.observe(section);
+    })();
+  </script>
+</body>
+</html>

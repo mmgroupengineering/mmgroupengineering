@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+title: Contact us
+nav: contact
+permalink: /contact/
+description: Contact MM Group Engineering for ship repair and marine engineering enquiries.
+---
+
+<section class="page-hero page-hero--compact">
+  <div class="content-width">
+    <h1 class="page-hero__title">Contact us</h1>
+    <p class="page-hero__lead">Reach out for quotations, technical questions, or project planning.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="content-width contact-grid">
+    <div class="contact-card">
+      <h2 class="contact-card__title">Direct</h2>
+      <p class="contact-card__line">
+        <strong>Email</strong><br>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </p>
+      <p class="contact-card__line">
+        <strong>Phone</strong><br>
+        <a href="tel:{{ site.phone | replace(' ', '') }}">{{ site.phone }}</a>
+      </p>
+      <p class="contact-card__line">
+        <strong>Address</strong><br>
+        {{ site.address }}
+      </p>
+    </div>
+    <div class="contact-card contact-card--note">
+      <h2 class="contact-card__title">Next steps</h2>
+      <p>
+        Share vessel type, location, and a short scope. We will respond with availability and any documents we need for a firm proposal.
+      </p>
+    </div>
+  </div>
+</section>

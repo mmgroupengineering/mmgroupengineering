@@ -1,0 +1,63 @@
+{
+  "heroLead": "Marine engineering with a focus on quality, safety, and clear communication.",
+  "missionQuote": "We deliver repair and engineering work that holds up at sea—not only on paper.",
+  "topBanner": "/static/banner.jpeg",
+  "topBannerAlt": "Marine repair and shipyard operations",
+  "anchors": [
+    { "id": "our-story", "label": "Our story" },
+    { "id": "what-we-do", "label": "What we do" },
+    { "id": "values", "label": "Values" },
+    { "id": "coverage", "label": "Coverage" }
+  ],
+  "story": {
+    "title": "Our story",
+    "image": "/static/banner.jpeg",
+    "imageAlt": "Ship repair and engineering at the quay",
+    "imageSide": "right",
+    "paragraphs": [
+      "MM Group Engineering was built around practical experience in ship repair and dock operations. Since 1998 we have supported owners and operators with dependable solutions for repair and servicing of marine vessels.",
+      "We work closely with owners, superintendents, and classification societies so documentation, inspections, and handover stay aligned from first cut to sailing."
+    ]
+  },
+  "whatWeDo": {
+    "title": "What we do",
+    "intro": "Our team covers the full chain from planning to sign-off.",
+    "bullets": [
+      "Structural steel, plate renewal, and hull integrity work",
+      "Piping, valves, and auxiliary systems to class rules",
+      "Welding and fabrication with traceable procedures",
+      "On-site supervision and coordination with the yard",
+      "Short port calls through full docking windows"
+    ]
+  },
+  "values": {
+    "title": "Values",
+    "intro": "How we run every job—on board, in the workshop, and with your office.",
+    "items": [
+      {
+        "title": "Safety first",
+        "text": "Toolbox talks, permits, and clear roles on board and ashore."
+      },
+      {
+        "title": "Transparency",
+        "text": "Realistic schedules, visible progress, and early escalation of risks."
+      },
+      {
+        "title": "Quality",
+        "text": "Procedures, inspections, and records that support handover and future surveys."
+      }
+    ]
+  },
+  "coverage": {
+    "title": "Coverage",
+    "paragraphs": [
+      "We support projects alongside in port and with partner yards for dockings and larger refits. Tell us your vessel type, location, and window—we will advise on feasibility and resourcing."
+    ]
+  },
+  "cta": {
+    "title": "Talk to us about your next repair",
+    "text": "Share your scope and schedule—we will respond with questions, availability, and next steps.",
+    "contactLabel": "Contact us",
+    "servicesLabel": "View services"
+  }
+}

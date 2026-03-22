@@ -1,0 +1,122 @@
+---
+layout: layouts/base.njk
+title: About us
+nav: about
+permalink: /about/
+description: Learn about MM Group Engineering — ship repair, values, and how we work with owners and yards.
+---
+
+{% if about.topBanner %}
+<section class="team-banner about-banner">
+  <img
+    class="team-banner__img"
+    src="{{ about.topBanner | url }}"
+    alt="{{ about.topBannerAlt }}"
+    width="1600"
+    height="560"
+    loading="eager"
+    decoding="async"
+  >
+</section>
+{% endif %}
+
+<section class="page-hero page-hero--compact">
+  <div class="content-width">
+    <h1 class="page-hero__title">About us</h1>
+    <p class="page-hero__lead">{{ about.heroLead }}</p>
+  </div>
+</section>
+
+<section class="about-mission" aria-label="Mission">
+  <div class="content-width">
+    <blockquote class="about-mission__quote">
+      <p>{{ about.missionQuote }}</p>
+    </blockquote>
+  </div>
+</section>
+
+<nav class="about-jump content-width" aria-label="On this page">
+  <ul class="about-jump__list">
+    {% for a in about.anchors %}
+      <li class="about-jump__item">
+        <a class="about-jump__link" href="#{{ a.id }}">{{ a.label }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+
+<section class="section section--alt about-section" id="our-story">
+  <div class="content-width">
+    <div class="about-split{% if about.story.imageSide == 'left' %} about-split--reverse{% endif %}">
+      <div class="about-split__text">
+        <h2 class="about-section__title">{{ about.story.title }}</h2>
+        {% for p in about.story.paragraphs %}
+          <p class="about-split__p">{{ p }}</p>
+        {% endfor %}
+      </div>
+      {% if about.story.image %}
+        <div class="about-split__media">
+          <img
+            class="about-split__img"
+            src="{{ about.story.image | url }}"
+            alt="{{ about.story.imageAlt }}"
+            width="720"
+            height="480"
+            loading="lazy"
+          >
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="section about-section" id="what-we-do">
+  <div class="content-width">
+    <h2 class="about-section__title about-section__title--center">{{ about.whatWeDo.title }}</h2>
+    {% if about.whatWeDo.intro %}
+      <p class="about-what-intro">{{ about.whatWeDo.intro }}</p>
+    {% endif %}
+    <ul class="about-bullet-grid">
+      {% for line in about.whatWeDo.bullets %}
+        <li class="about-bullet-grid__item">{{ line }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section--alt about-section" id="values">
+  <div class="content-width">
+    <h2 class="about-section__title about-section__title--center">{{ about.values.title }}</h2>
+    {% if about.values.intro %}
+      <p class="about-values-intro">{{ about.values.intro }}</p>
+    {% endif %}
+    <ul class="about-values">
+      {% for v in about.values.items %}
+        <li class="about-values__item">
+          <h3 class="about-values__name">{{ v.title }}</h3>
+          <p class="about-values__text">{{ v.text }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section about-section" id="coverage">
+  <div class="content-width about-coverage">
+    <h2 class="about-section__title">{{ about.coverage.title }}</h2>
+    {% for p in about.coverage.paragraphs %}
+      <p class="about-coverage__p">{{ p }}</p>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="about-cta" aria-label="Next steps">
+  <div class="content-width about-cta__inner">
+    <h2 class="about-cta__title">{{ about.cta.title }}</h2>
+    <p class="about-cta__text">{{ about.cta.text }}</p>
+    <div class="about-cta__actions">
+      <a class="btn btn--primary" href="{{ '/contact/' | url }}">{{ about.cta.contactLabel }}</a>
+      <a class="btn btn--outline-light" href="{{ '/services/' | url }}">{{ about.cta.servicesLabel }}</a>
+    </div>
+  </div>
+</section>
