@@ -1,0 +1,199 @@
+---
+pagination:
+  data: services
+  size: 1
+  alias: service
+permalink: "/services/{{ service.slug }}/"
+layout: layouts/base.njk
+eleventyComputed:
+  title: "{{ service.title }}"
+  description: "{{ service.title }} — MM Group Engineering."
+nav: services
+---
+
+<section class="page-hero page-hero--compact">
+  <div class="content-width">
+    <p class="service-breadcrumb">
+      <a href="{{ '/services/' | url }}">Services</a>
+    </p>
+    <h1 class="page-hero__title">{{ service.title }}</h1>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="content-width">
+    <article class="service-detail service-detail--single">
+      <div class="service-detail__grid">
+        <div class="service-detail__media">
+          <img
+            class="service-detail__img"
+            src="{{ (service.mainImage | default(service.image)) | url }}"
+            alt="{{ service.title }}"
+            width="720"
+            height="480"
+            loading="eager"
+          >
+        </div>
+        <div class="service-detail__body">
+          {% for p in service.paragraphs %}
+            <p class="service-detail__text">{{ p }}</p>
+          {% endfor %}
+          <p class="service-detail__back">
+            <a href="{{ '/services/' | url }}">← All services</a>
+          </p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% if service.galleryImages | length %}
+<section class="section section--alt service-gallery-section" aria-label="Project gallery">
+  <div class="content-width">
+    <h2 class="service-gallery__heading">Gallery</h2>
+    <ul class="service-gallery" data-gallery-root>
+      {% for img in service.galleryImages %}
+        <li class="service-gallery__item">
+          <figure class="service-gallery__figure">
+            <button
+              type="button"
+              class="service-gallery__trigger"
+              aria-label="Open gallery image {{ loop.index }} of {{ service.galleryImages | length }}, larger view"
+              data-gallery-index="{{ loop.index0 }}"
+            >
+              <img
+                class="service-gallery__img"
+                src="{{ img | url }}"
+                alt="Gallery photo {{ loop.index }} — {{ service.title }}"
+                width="800"
+                height="600"
+                loading="lazy"
+                decoding="async"
+              >
+            </button>
+          </figure>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <dialog class="gallery-lightbox" data-gallery-dialog aria-modal="true" aria-labelledby="gallery-lightbox-title">
+    <div class="gallery-lightbox__frame">
+      <button
+        type="button"
+        class="gallery-lightbox__backdrop"
+        data-gallery-close
+        tabindex="-1"
+        aria-hidden="true"
+      ></button>
+      <div class="gallery-lightbox__panel">
+        <h2 id="gallery-lightbox-title" class="visually-hidden">{{ service.title }} — gallery</h2>
+        <button type="button" class="gallery-lightbox__close" data-gallery-close aria-label="Close gallery">
+          <span aria-hidden="true">×</span>
+        </button>
+        <div class="gallery-lightbox__stage">
+          <button
+            type="button"
+            class="gallery-lightbox__nav gallery-lightbox__nav--prev"
+            data-gallery-prev
+            aria-label="Previous image"
+          >
+            <span aria-hidden="true">‹</span>
+          </button>
+          <img class="gallery-lightbox__img" alt="" decoding="async">
+          <button
+            type="button"
+            class="gallery-lightbox__nav gallery-lightbox__nav--next"
+            data-gallery-next
+            aria-label="Next image"
+          >
+            <span aria-hidden="true">›</span>
+          </button>
+        </div>
+        <p class="gallery-lightbox__counter" aria-live="polite">
+          <span data-gallery-current>1</span> / <span data-gallery-total>{{ service.galleryImages | length }}</span>
+        </p>
+      </div>
+    </div>
+  </dialog>
+</section>
+<script>
+  (function () {
+    var dialog = document.querySelector("[data-gallery-dialog]");
+    var root = document.querySelector("[data-gallery-root]");
+    if (!dialog || !root) return;
+
+    var triggers = root.querySelectorAll(".service-gallery__trigger");
+    var urls = [];
+    for (var i = 0; i < triggers.length; i++) {
+      var thumb = triggers[i].querySelector("img");
+      urls.push(thumb ? thumb.src : "");
+    }
+
+    var lbImg = dialog.querySelector(".gallery-lightbox__img");
+    var currentEl = dialog.querySelector("[data-gallery-current]");
+    var prevBtn = dialog.querySelector("[data-gallery-prev]");
+    var nextBtn = dialog.querySelector("[data-gallery-next]");
+    var total = urls.length;
+    var index = 0;
+    var lastFocus = null;
+
+    if (total <= 1) dialog.classList.add("gallery-lightbox--single");
+
+    function show(at) {
+      index = ((at % total) + total) % total;
+      var src = urls[index];
+      if (!src || !lbImg) return;
+      lbImg.src = src;
+      lbImg.alt = "Gallery image " + (index + 1) + " of " + total;
+      if (currentEl) currentEl.textContent = String(index + 1);
+    }
+
+    root.addEventListener("click", function (e) {
+      var t = e.target && e.target.closest ? e.target.closest(".service-gallery__trigger") : null;
+      if (!t || !root.contains(t)) return;
+      e.preventDefault();
+      var i = parseInt(t.getAttribute("data-gallery-index"), 10);
+      if (isNaN(i)) return;
+      show(i);
+      lastFocus = document.activeElement;
+      dialog.showModal();
+      var closeBtn = dialog.querySelector(".gallery-lightbox__close");
+      if (closeBtn) closeBtn.focus();
+    });
+
+    dialog.querySelectorAll("[data-gallery-close]").forEach(function (el) {
+      el.addEventListener("click", function () {
+        dialog.close();
+      });
+    });
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function () {
+        show(index - 1);
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function () {
+        show(index + 1);
+      });
+    }
+
+    dialog.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        show(index - 1);
+      } else if (e.key === "ArrowRight") {
+        e.preventDefault();
+        show(index + 1);
+      }
+    });
+
+    dialog.addEventListener("close", function () {
+      if (lastFocus && typeof lastFocus.focus === "function") {
+        lastFocus.focus();
+      }
+      lastFocus = null;
+    });
+  })();
+</script>
+{% endif %}

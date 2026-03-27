@@ -1,38 +1,100 @@
 [
   {
-    "slug": "main-engine-maintenance",
-    "title": "Main Engine and Auxiliary Machinery Overhaul & Maintenance",
-    "image": "/static/services/engine_2.jpg",
+    "slug": "propulsion-and-steering-systems",
+    "title": "Propulsion and Steering Systems Maintenance",
+    "image": "/assets/images/services/propulsion/propulsion.jpg",
+    "galleryImages": [
+      "/assets/images/services/propulsion/gallery/1.jpg",
+      "/assets/images/services/propulsion/gallery/2.jpg",
+      "/assets/images/services/propulsion/gallery/3.jpg",
+      "/assets/images/services/propulsion/gallery/4.jpg",
+      "/assets/images/services/propulsion/gallery/5.jpg"
+    ],
     "paragraphs": [
-      "We plan and execute dry-docking work with clear scopes, yard coordination, and class attendance. Hull steel, propulsion, and underwater fittings are surveyed and repaired to agreed standards and documentation packages.",
-      "Tell us your docking window and vessel particulars—we align resources and supervision so handover matches your sailing schedule."
+      "We service and overhaul propulsion and steering equipment including bow and stern thrusters, propellers, rudders, and steering gear assemblies. All work is carried out in accordance with class requirements, manufacturer specifications, and approved procedures.",
+      "From inspections and alignments to full component replacement, we ensure your vessel’s maneuverability systems operate safely and efficiently before departure."
     ]
   },
   {
-    "slug": "welding-services",
-    "title": "Welding Services",
-    "image": "/static/services/welding_2.jpg",
+    "slug": "hydraulic-and-mechanical-power-systems",
+    "title": "Hydraulic and Mechanical Power Systems",
+    "mainImage": "/assets/images/services/hydraulics/hydraulics.jpg",
+    "galleryImages": [
+      "/assets/images/services/hydraulics/gallery/1.jpg",
+      "/assets/images/services/hydraulics/gallery/2.jpg",
+      "/assets/images/services/hydraulics/gallery/3.jpg"
+    ],
     "paragraphs": [
-      "Our marine services cover piping, systems, and auxiliary equipment in port and alongside. We work from approved procedures and keep traceability for parts, tests, and sign-off.",
-      "Whether the job is a short call or a multi-week availability, we structure the work list so owners see progress and risks early."
+      "Our team maintains and repairs hydraulic cylinders, pumps, motors, and gearboxes used across deck and engine room systems. We provide fault diagnosis, seal replacement, pressure testing, and complete system overhauls when required.",
+      "By restoring performance and eliminating leaks or inefficiencies, we help operators avoid unplanned downtime and maintain reliable onboard power transmission."
     ]
   },
   {
-    "slug": "painting-services",
-    "title": "Blasting and Painting Services",
-    "image": "/static/services/blasting.jpg",
+    "slug": "deck-machinery-and-cargo-handling",
+    "title": "Deck Machinery and Cargo Handling Equipment",
+    "mainImage": "/assets/images/services/deck-machinery/deck-machinery.jpg",
+    "galleryImages": [
+      "/assets/images/services/deck-machinery/gallery/1.jpg",
+      "/assets/images/services/deck-machinery/gallery/2.jpg",
+      "/assets/images/services/deck-machinery/gallery/3.jpg",
+      "/assets/images/services/deck-machinery/gallery/4.jpg",
+      "/assets/images/services/deck-machinery/gallery/5.jpg",
+      "/assets/images/services/deck-machinery/gallery/6.jpg",
+      "/assets/images/services/deck-machinery/gallery/7.jpg",
+      "/assets/images/services/deck-machinery/gallery/8.jpg",
+      "/assets/images/services/deck-machinery/gallery/9.jpg",
+      "/assets/images/services/deck-machinery/gallery/10.jpg",
+      "/assets/images/services/deck-machinery/gallery/11.jpg",
+      "/assets/images/services/deck-machinery/gallery/12.jpg",
+      "/assets/images/services/deck-machinery/gallery/13.jpg",
+      "/assets/images/services/deck-machinery/gallery/14.jpg",
+      "/assets/images/services/deck-machinery/gallery/15.jpg",
+      "/assets/images/services/deck-machinery/gallery/16.jpg",
+      "/assets/images/services/deck-machinery/gallery/17.jpg",
+      "/assets/images/services/deck-machinery/gallery/18.jpg",
+      "/assets/images/services/deck-machinery/gallery/19.jpg",
+      "/assets/images/services/deck-machinery/gallery/20.jpg",
+      "/assets/images/services/deck-machinery/gallery/21.jpg",
+      "/assets/images/services/deck-machinery/gallery/22.jpg",
+      "/assets/images/services/deck-machinery/gallery/23.jpg",
+      "/assets/images/services/deck-machinery/gallery/24.jpg",
+      "/assets/images/services/deck-machinery/gallery/25.jpg"
+
+    ],
     "paragraphs": [
-      "We blast and paint the hull and superstructure of the vessel to agreed standards and documentation packages.",
-      "Ask us about our capacity and slots for your next project—we can advise on realistic timelines and interfaces with the yard."
+      "We maintain and overhaul deck equipment such as anchor and mooring winches, windlasses, cranes, and other cargo handling machinery. Our work includes mechanical repairs, hydraulic servicing, load testing, and operational checks.",
+      "Whether during dry-dock or afloat, we ensure all deck machinery meets safety standards and performs reliably during demanding port and offshore operations."
     ]
   },
   {
-    "slug": "piping-services",
-    "title": "Pipe Systems Maintenance",
-    "image": "/static/services/piping.jpg",
+    "slug": "engine-room-machinery-and-auxiliaries",
+    "title": "Engine Room Machinery and Auxiliary Systems",
+    "mainImage": "/assets/images/services/engine-machinery/engine-machinery.jpg",
+    "galleryImages": [
+      "/assets/images/services/engine-machinery/gallery/1.jpg",
+      "/assets/images/services/engine-machinery/gallery/2.jpg",
+      "/assets/images/services/engine-machinery/gallery/3.jpg",
+      "/assets/images/services/engine-machinery/gallery/4.jpg",
+      "/assets/images/services/engine-machinery/gallery/5.jpg",
+      "/assets/images/services/engine-machinery/gallery/6.jpg",
+      "/assets/images/services/engine-machinery/gallery/7.jpg",
+      "/assets/images/services/engine-machinery/gallery/8.jpg",
+      "/assets/images/services/engine-machinery/gallery/9.jpg",
+      "/assets/images/services/engine-machinery/gallery/10.jpg",
+      "/assets/images/services/engine-machinery/gallery/11.jpg",
+      "/assets/images/services/engine-machinery/gallery/12.jpg",
+      "/assets/images/services/engine-machinery/gallery/13.jpg",
+      "/assets/images/services/engine-machinery/gallery/14.jpg",
+      "/assets/images/services/engine-machinery/gallery/15.jpg",
+      "/assets/images/services/engine-machinery/gallery/16.jpg",
+      "/assets/images/services/engine-machinery/gallery/17.jpg",
+      "/assets/images/services/engine-machinery/gallery/18.jpg",
+      "/assets/images/services/engine-machinery/gallery/19.jpg",
+      "/assets/images/services/engine-machinery/gallery/20.jpg"
+    ],
     "paragraphs": [
-      "We fabricate and install piping and systems to agreed standards and documentation packages.",
-      "Ask us abougt our capacity and slots for your next project—we can advise on realistic timelines and interfaces with the yard."
+      "We provide inspection, maintenance, and overhaul of main engines, auxiliary generators, pumps, compressors, heat exchangers, boilers, and valves. Our technicians follow OEM procedures and class guidelines to ensure full compliance and traceability.",
+      "From routine servicing to complete machinery rebuilds, we support shipowners with planned maintenance that improves efficiency, extends equipment life, and reduces the risk of in-service failures."
     ]
   }
 ]

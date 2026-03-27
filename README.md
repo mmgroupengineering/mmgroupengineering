@@ -35,7 +35,7 @@ Production URL (this repo): `https://mmgroupengineering.github.io/mmgroupenginee
 | Home “What we offer” cards | `src/_data/services.json` |
 | Team | `src/_data/team.json` |
 | About (copy, banner, anchors, CTA) | `src/_data/about.json` · `src/about.njk` |
-| Services (home strip + detail page) | `src/_data/services.json` · `src/services.njk` |
+| Services | `src/_data/services.json` · `src/services.njk` (split-row index) · `src/service.njk` (detail under `/services/<slug>/`) |
 | Logo in header | `static/logo.png` (copied to the site root as `/static/logo.png`) |
 
 ## Logo

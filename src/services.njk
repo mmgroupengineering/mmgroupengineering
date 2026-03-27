@@ -13,22 +13,37 @@ description: Marine repair and engineering services — dry dock, teams, and fac
   </div>
 </section>
 
-<section class="section section--tight">
+<section class="section section--tight service-index-section" aria-label="Service list">
   <div class="content-width">
-    {% for item in services %}
-      <article class="service-detail" id="{{ item.slug }}">
-        <div class="service-detail__grid{% if loop.index0 % 2 == 1 %} service-detail__grid--reverse{% endif %}">
-          <div class="service-detail__media">
-            <img class="service-detail__img" src="{{ item.image | url }}" alt="{{ item.title }}" width="720" height="480" loading="lazy">
-          </div>
-          <div class="service-detail__body">
-            <h2 class="service-detail__title">{{ item.title }}</h2>
-            {% for p in item.paragraphs %}
-              <p class="service-detail__text">{{ p }}</p>
-            {% endfor %}
-          </div>
-        </div>
-      </article>
-    {% endfor %}
+    <ul class="service-index">
+      {% for item in services %}
+        <li class="service-index__item">
+          <a
+            class="service-index__row{% if loop.index0 % 2 == 1 %} service-index__row--reverse{% endif %}"
+            href="{{ ('/services/' ~ item.slug ~ '/') | url }}"
+          >
+            <div class="service-index__figure">
+              <img
+                class="service-index__img"
+                src="{{ (item.mainImage | default(item.image)) | url }}"
+                alt=""
+                width="720"
+                height="432"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="service-index__content">
+              <h2 class="service-index__title">{{ item.title }}</h2>
+              <p class="service-index__excerpt">{{ item.paragraphs[0] }}</p>
+              <span class="service-index__action">
+                Explore
+                <span class="service-index__arrow" aria-hidden="true">→</span>
+              </span>
+            </div>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
   </div>
 </section>

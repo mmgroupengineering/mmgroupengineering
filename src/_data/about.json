@@ -1,7 +1,7 @@
 {
   "heroLead": "Marine engineering with a focus on quality, safety, and clear communication.",
   "missionQuote": "We deliver repair and engineering work that holds up at sea—not only on paper.",
-  "topBanner": "/static/banner.jpeg",
+  "topBanner": "/assets/images/banner.jpeg",
   "topBannerAlt": "Marine repair and shipyard operations",
   "anchors": [
     { "id": "our-story", "label": "Our story" },
@@ -11,7 +11,7 @@
   ],
   "story": {
     "title": "Our story",
-    "image": "/static/banner.jpeg",
+    "image": "/assets/images/banner.jpeg",
     "imageAlt": "Ship repair and engineering at the quay",
     "imageSide": "right",
     "paragraphs": [

@@ -35,7 +35,7 @@ description: MM Group Engineering — ship repair and marine engineering.
   </div>
   <div class="service-strip" role="list">
     {% for item in services %}
-      <a class="service-panel" role="listitem" href="{{ '/services/' | url }}#{{ item.slug }}" style="--service-panel-image: url('{{ item.image | url }}')">
+      <a class="service-panel" role="listitem" href="{{ ('/services/' ~ item.slug ~ '/') | url }}" style="--service-panel-image: url('{{ (item.mainImage | default(item.image)) | url }}')">
         <span class="service-panel__overlay" aria-hidden="true"></span>
         <span class="service-panel__inner">
           <span class="service-panel__title">{{ item.title }}</span>
