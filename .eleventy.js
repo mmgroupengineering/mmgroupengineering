@@ -2,11 +2,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("static");
+  eleventyConfig.addPassthroughCopy("CNAME");
 
   eleventyConfig.addShortcode("year", () => String(new Date().getFullYear()));
 
   return {
-    pathPrefix: "/mmgroupengineering/",
+    // Root-hosted site (custom domain or username.github.io). For project pages use "/repo-name/"
+    pathPrefix: "/",
     dir: {
       input: "src",
       includes: "_includes",
